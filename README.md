@@ -13,7 +13,7 @@ https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
 
 However, there is nowhere a link to download the database so I decided to create a SQL code for it which I hope you'll find useful because it is nice to have this database locally where you can perform all sorts of SQL queries, tests, for practicing and learning purposes etc. Enjoy!
 
-When the SQL file is executed it creates database named __w3schools__ with the following tables
+When the SQL file is executed it creates database named **w3schools** with the following tables
 
     categories
     customers
@@ -23,10 +23,47 @@ When the SQL file is executed it creates database named __w3schools__ with the f
     products
     shippers
     suppliers
-    
-and inserts the respective data. 
+
+and inserts the respective data.
 
 You can change the database name if you want by modifying these 2 lines of code
 
     CREATE DATABASE IF NOT EXISTS `w3schools`
     USE `w3schools`;
+
+---
+
+### Installation for PostgreSQL
+
+#### 1. Create a database called "w3school"
+
+## ![Create database](./gifs/1-create-db.gif)
+
+#### 2. Insert SQL codes
+
+Copy the SQL code from the file, paste it into the query box, and then execute it.
+
+## ![Insert SQL codes](./gifs/2-insert-sql-code.gif)
+
+---
+
+#### Note:
+
+CategoryID, CustomerID, EmployeesID, OrderDetailsID, OrderID, ProductID, ShipperID, SupplierID ---> just ID.
+
+### Example:
+
+```sql
+
+CREATE TABLE customers (
+  ID int NOT NULL, -- Not CustomerID.
+  CustomerName varchar(255) DEFAULT NULL,
+  ContactName varchar(255) DEFAULT NULL,
+  Address varchar(255) DEFAULT NULL,
+  City varchar(255) DEFAULT NULL,
+  PostalCode varchar(255) DEFAULT NULL,
+  Country varchar(255) DEFAULT NULL,
+  CONSTRAINT customers_pk PRIMARY KEY (ID)
+) ;
+
+```
